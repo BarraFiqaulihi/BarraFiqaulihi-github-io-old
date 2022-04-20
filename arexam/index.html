@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary Exam</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="welcome-page">
+        <img id="welcome-almufasi-logo" src="img/[Almufasi] Logo Mentah.png" alt="Logo Almufasi">
+        <h1 id="welcome-title">Ahlan wa Sahlan</h1>
+    </div>
+
+    <!-- Deactivated -->
+    <div id="wait-screen" class="d-none wait-screen bg-black bg-opacity-50">
+        <img class="img-object" src="img/[Almufasi] Logo Mentah.png" alt="Logo Almufasi">
+    </div>
+
+    <!-- Login Page -->
+    <div id="login-page" class="d-none container-fluid h-100 d-flex flex-column justify-content-center align-items-center bg-info">
+        <h1 class="mb-4 fade-in-up text-center">Welcome, sign in or join a room!</h1>
+        <div class="input-group mb-3 fade-in-up" style="max-width: 50rem;">
+            <!-- Apaan sih aria? -->
+            <input type="text" id="username-input" name="username" class="form-control" autocomplete="off" placeholder="username" aria-label="username" aria-describedby="login-btn">
+            <button class="clear-btn btn btn-outline-secondary btn-dark fw-bold" style="width: 5rem;">X</button>
+        </div>
+        <div class="input-group mb-3 fade-in-up" style="max-width: 50rem;">
+            <!-- Apaan sih aria? -->
+            <input type="password" id="password-input" name="password" class="form-control" autocomplete="off" placeholder="password" aria-label="password" aria-describedby="login-btn">
+            <button class="clear-btn btn btn-outline-secondary btn-dark fw-bold" style="width: 5rem;">X</button>
+        </div>
+        <button id="sign-in-btn" class="mb-2 btn btn-outline-secondary btn-dark fade-in-up" style="width: 10rem;">Sign in</button>
+        <a id="join-room-anchor" class="fade-in-up">Join room</a>
+        <!-- <div class="d-flex justify-content-center align-items-center" style="height: 14rem;">
+            <img class="img-object" src="img/[Almufasi] Logo Mentah.png" alt="Logo Almufasi">
+        </div> -->
+    </div>
+
+    <!-- Main Menu Page -->
+    <div id="main-menu-page" class="d-none h-100 fade-in">
+        <div class="particle-effect-bubble position-absolute start-0 end-0"></div>
+        <h1 id="main-menu-title" class="position-absolute">Arexam</h1>
+        <div id="main-menu-ops-container" class="position-absolute d-flex flex-column align-items-start">
+            <div id="main-menu-start-btn" class="main-menu-ops">Start</div>
+            <div class="main-menu-ops">Settings</div>
+            <div id="main-menu-exit-btn" class="main-menu-ops">Exit</div>
+        </div>
+        <span id="main-menu-version" class="position-absolute">v0.1.0</span>
+        <span id="main-menu-credit" class="position-absolute">Created by : Almufasi in collaboration with OPMA Language Division 1443H</span>
+    </div>
+
+    <!-- Dashboard Page -->
+    <div id="dashboard-page" class="d-none h-100 bg-danger">
+        <div class="row w-100">
+            <div class="col d-flex justify-content-start">
+                <h1 id="dashboard-page-back-btn" class="bg-warning">&lt;</h1>
+            </div>
+        </div>
+        <div class="row w-100 d-flex justify-content-center align-items-center flex-grow-1">
+            <div class="window text-white d-flex flex-column">
+                <div class="h-100 d-flex flex-column">
+                    <div class="row mb-2 d-flex justify-content-center">
+                        <h1 class="text-center">Select Room</h1>
+                    </div>
+                    <div class="row flex-grow-1 d-flex justify-content-center" style="overflow-y: scroll;">
+                        <div class="col">
+                            <ol id="room-list" class="list-group rounded-3 hover-dark-child">
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Room I</div>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit consequuntur amet consectetur ullam officia magnam explicabo soluta pariatur itaque aliquid?
+                                    </div>
+                                    <span class="badge bg-primary rounded-pill">14</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Room II</div>
+                                    Content for list item
+                                    </div>
+                                    <span class="badge bg-primary rounded-pill">14</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Room III</div>
+                                    Content for list item
+                                    </div>
+                                    <span class="badge bg-primary rounded-pill">14</span>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="window-back-btn">X</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Join Room Page -->
+    <div id="join-room-page" class="d-none container-fluid h-100 d-flex flex-column justify-content-center align-items-center bg-info">
+        <h1 class="mb-4 fade-in-up text-center">Welcome, write your name and join a room!</h1>
+        <div class="input-group mb-3 fade-in-up" style="max-width: 50rem;">
+            <!-- Apaan sih aria? -->
+            <input type="text" id="name-input" name="name" class="form-control" autocomplete="off" placeholder="Name" aria-label="Name" aria-describedby="join-btn">
+            <button class="clear-btn btn btn-outline-secondary btn-dark fw-bold" style="width: 5rem;">X</button>
+        </div>
+        <div class="input-group mb-3 fade-in-up" style="max-width: 50rem;">
+            <!-- Apaan sih aria? -->
+            <input type="text" id="room-input" name="roomID" class="form-control" autocomplete="off" placeholder="Room ID" aria-label="Room ID" aria-describedby="join-btn">
+            <button class="clear-btn btn btn-outline-secondary btn-dark fw-bold" id="clear-btn" style="width: 5rem;">X</button>
+        </div>
+        <button class="mb-2 btn btn-outline-secondary btn-dark fade-in-up" id="join-btn" style="width: 10rem;">Join</button>
+        <a id="sign-in-anchor" class="fade-in-up">Sign in</a>
+        <!-- <div class="d-flex justify-content-center align-items-center" style="height: 14rem;">
+            <img class="img-object" src="img/[Almufasi] Logo Mentah.png" alt="Logo Almufasi">
+        </div> -->
+    </div>
+
+    <!-- Room Page -->
+    <div id="room-page" class="d-none container-fluid h-100 bg-success">
+        <div class="d-flex h-100 flex-column justify-content-between align-items-center bg-info">
+            <div class="row w-100 bg-danger justify-content-around p-4">
+                <div class="col">
+                    <div id="room-page-back-btn" class="card">
+                        <h1 class="text-center card-title">&lt;</h1>
+                    </div>
+                </div>
+                <div class="col-10">
+                    <div class="card rounded-3">
+                        <h1 id="room-page-title" class="text-center card-title">Room Page</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row w-100 bg-warning px-3">
+                <h4 id="room-page-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda non quibusdam qui aut ipsa officiis?</h5>
+            </div>
+            <div class="row w-100 p-3 bg-danger">
+                <div class="col-6 bg-warning">
+                    <h3 id="room-page-date-created" class="text-center">Created at: 22 November 2022</h3>
+                </div>
+                <div class="col-6 bg-warning">
+                    <h3 id="room-page-slide-count" class="text-center">Slide count: --</h3>
+                </div>
+            </div>
+            <div class="row w-100 bg-danger px-1 py-4">
+                <div class="col-8">
+                    <div id="room-page-start-btn" class="rounded-pill bg-info h-100 d-flex justify-content-center align-items-center">
+                        <h1 class="text-white fw-bold">START</h1>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <ol class="list-group list-group-numbered">
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Subheading</div>
+                                Content for list item
+                            </div>
+                            <span class="badge bg-primary rounded-pill">14</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Subheading</div>
+                                Content for list item
+                            </div>
+                            <span class="badge bg-primary rounded-pill">14</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Subheading</div>
+                                Content for list item
+                            </div>
+                            <span class="badge bg-primary rounded-pill">14</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Subheading</div>
+                                Content for list item
+                            </div>
+                            <span class="badge bg-primary rounded-pill">14</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Subheading</div>
+                                Content for list item
+                            </div>
+                            <span class="badge bg-primary rounded-pill">14</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Exam Page -->
+    <div id="exam-page" class="d-none container-fluid h-100 d-flex">
+        <div class="col-8 bg-warning p-5 py-3 question-container">
+
+            <!-- PG Slide -->
+            <div id="pg-slide" class="d-none h-100 w-100 bg-info d-flex flex-column justify-content-center">
+                <div class="row rounded-3 bg-danger py-2 mb-3">
+                    <h3 id="exam-page-slide-title" class="slide-title text-center">Terjemahkan kata-kata berikut ini ke dalam bahasa arab!</h3>
+                </div>
+                <div class="row rounded-3 py-2 mb-3 bg-danger">
+                    <h1 id="exam-page-slide-question" class="slide-question text-center one-word">Makan</h1>
+                </div>
+                <div class="row rounded-3 mb-3 bg-danger">
+                    <div id="exam-page-time-bar" class="timer-bar rounded-3"></div>
+                </div>
+                <div class="row rounded-3 mb-3 py-4 bg-danger">
+                    <div class="row justify-content-around mb-5">
+                        <div class="choice col-4 rounded-3 p-2 bg-warning">
+                            <h2 id="exam-page-choice-1" class="text-center">A</h2>
+                        </div>
+                        <div class="choice col-4 rounded-3 p-2 bg-warning">
+                            <h2 id="exam-page-choice-2" class="text-center">B</h2>
+                        </div>
+                    </div>
+                    <div class="row justify-content-around mb-2">
+                        <div class="choice col-4 rounded-3 p-2 bg-warning">
+                            <h2 id="exam-page-choice-3" class="text-center">C</h2>
+                        </div>
+                        <div class="choice col-4 rounded-3 p-2 bg-warning">
+                            <h2 id="exam-page-choice-4" class="text-center">D</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- Addition -->
+                <div class="row">
+                    <div class="row justify-content-between mx-auto py-2 rounded-3 bg-danger">
+                        <button type="button" class="btn btn-primary" style="width: 20%;">Answer</button>
+                        <button type="button" class="next-slide-btn btn btn-primary" style="width: 20%;">Next ></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Essay Slide -->
+            <div id="essay-slide" class="d-none h-100 w-100 bg-info d-flex flex-column justify-content-center">
+                <div class="row rounded-3 bg-danger py-2 mb-3">
+                    <h3 id="exam-page-slide-title" class="slide-title text-center">Terjemahkan kata-kata berikut ini ke dalam bahasa arab!</h3>
+                </div>
+                <div class="row rounded-3 py-2 mb-3 bg-danger">
+                    <h1 id="exam-page-slide-question" class="slide-question text-center one-word">Makan</h1>
+                </div>
+                <div class="row rounded-3 mb-3 bg-danger">
+                    <div id="exam-page-time-bar" class="timer-bar rounded-3"></div>
+                </div>
+                <div class="row rounded-3 mb-3 py-4 bg-danger">
+                    <h2 class="text-center">Answer:</h2>
+                    <h1 class="text-center">No Answer!</h1>
+                </div>
+                <!-- Addition -->
+                <div class="row">
+                    <div class="row justify-content-between mx-auto py-2 rounded-3 bg-danger">
+                        <button type="button" class="btn btn-primary" style="width: 20%;">Answer</button>
+                        <button type="button" class="next-slide-btn btn btn-primary" style="width: 20%;">Next ></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 bg-danger d-flex flex-column justify-content-center align-items-center">
+            <div class="card mb-4" style="width: 20rem;">
+                <h1 class="text-center">Top 10!</h1>
+            </div>
+            <div class="card mb-4" style="width: 20rem;">
+                <div class="card-body fw-bold">
+                    <h3 class="card-title text-center">Score Board</h3>
+                    <hr>
+                    <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+                    <ol>
+                        <li>A</li>
+                        <li>B</li>
+                        <li>C</li>
+                        <li>D</li>
+                        <li>E</li>
+                        <li>F</li>
+                        <li>G</li>
+                        <li>H</li>
+                        <li>I</li>
+                        <li>J</li>
+                    </ol>
+                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a> -->
+                </div>
+            </div>
+            <div id="result-page-nya-belum" class="card mb-4" style="width: 20rem;">
+                <h1 class="text-center">ResultPage nya belum</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Result Page -->
+    <div id="result-page" class="d-none container-fluid h-100 d-flex justify-content-center align-items-center">
+        <h1>Result Page</h1>
+    </div>
+
+    <!-- Window -->
+    <!-- <div id="main-menu-start-window" class="d-none window text-white d-flex flex-column">
+        <div id="main-menu-room-selection" class="h-100 d-flex flex-column">
+            <div class="row mb-2 d-flex justify-content-center">
+                <h1 class="text-center">Select Room</h1>
+            </div>
+            <div class="row flex-grow-1 d-flex justify-content-center" style="overflow-y: scroll;">
+                <div class="col pb-5">
+                    <ol id="room-list" class="list-group rounded-3 hover-dark-child">
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                            <div class="fw-bold">Room I</div>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit consequuntur amet consectetur ullam officia magnam explicabo soluta pariatur itaque aliquid?
+                            </div>
+                            <span class="badge bg-primary rounded-pill">14</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                            <div class="fw-bold">Room II</div>
+                            Content for list item
+                            </div>
+                            <span class="badge bg-primary rounded-pill">14</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                            <div class="fw-bold">Room III</div>
+                            Content for list item
+                            </div>
+                            <span class="badge bg-primary rounded-pill">14</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                            <div class="fw-bold">Room I</div>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit consequuntur amet consectetur ullam officia magnam explicabo soluta pariatur itaque aliquid?
+                            </div>
+                            <span class="badge bg-primary rounded-pill">14</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                            <div class="fw-bold">Room II</div>
+                            Content for list item
+                            </div>
+                            <span class="badge bg-primary rounded-pill">14</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                            <div class="fw-bold">Room III</div>
+                            Content for list item
+                            </div>
+                            <span class="badge bg-primary rounded-pill">14</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="window-back-btn">X</div>
+    </div> -->
+    <!-- <div class="window-container">
+    </div> -->
+
+    <!-- Audio -->
+    <!-- <audio src="audio/RA3 March (corrected).mp3" loop="true" data-name="RA3 March"></audio> -->
+    <audio src="audio/Dying Light 2 - Main Menu Theme.mp3" loop="true" data-name="RA3 March"></audio>
+    <audio src="audio/surprise-sound-effect-99300.mp3" data-name="Surprise" loop="true"></audio>
+    <audio src="audio/Tarrey Town (The Legend of Zelda- Breath of the Wild OST) 22050Hz.mp3" data-name="Tarrey Town"></audio>
+    <audio src="audio/Tarrey Town - Married (The Legend of Zelda- Breath of the Wild OST) 22050Hz.mp3" data-name="Tarrey Town - Married" loop="true"></audio>
+    <audio src="audio/Kena- Bridge of Spirits - Befriending Spirits_2.mp3" data-name="Befriending Spirits" loop="true"></audio>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
