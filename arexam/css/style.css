@@ -17,6 +17,12 @@ html, body {
     /* margin: 0px; */
 }
 
+/* Preload Contents */
+body::after {
+    display: none;
+    content: url(/arexam/img/tales_of_vastor___main_menu_background_by_lukasirzl_dcjdqcx-fullview.jpg);
+}
+
 div.page {
     transition: all 1s;
     -webkit-transition: all 1s;
