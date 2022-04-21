@@ -19,7 +19,7 @@ html, body {
 
 /* Preload Contents */
 body::after {
-    display: none;
+    height: 0px;
     content: url(/arexam/img/tales_of_vastor___main_menu_background_by_lukasirzl_dcjdqcx-fullview.jpg);
 }
 
