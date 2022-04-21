@@ -19,8 +19,8 @@ html, body {
 
 /* Preload Contents */
 body::after {
-    height: 0px;
-    content: url(/arexam/img/tales_of_vastor___main_menu_background_by_lukasirzl_dcjdqcx-fullview.jpg);
+    content: "";
+    background-image: url(/arexam/img/tales_of_vastor___main_menu_background_by_lukasirzl_dcjdqcx-fullview.jpg);
 }
 
 div.page {
