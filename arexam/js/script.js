@@ -291,7 +291,7 @@ class LoginPage extends Page {
             if(client.readyState === 4 && client.status === 200) {
                 console.log(client.responseText);
                 let response = JSON.parse(client.responseText);
-                if(!response.ok) return;
+                if(!response.ok) return alert(response.message);
                 if(this.onSignIn.length > 0) this.onSignIn.forEach(e => e(response.result));
             }
         };
