@@ -1,8 +1,8 @@
 # Ilmu Falak dan Metode Hisab
 
-![Image](../img/Lukisan%20abad%20ke%2016%20dari%20ilmu%20falak%20Ottoman.jpeg)
+![Image](img/Lukisan%20abad%20ke%2016%20dari%20ilmu%20falak%20Ottoman.jpeg)
 
-![Spiderman](../img/Spiderman.gif)
+![Spiderman](img/Spiderman.gif)
 
 ## Ilmu Falak
 
