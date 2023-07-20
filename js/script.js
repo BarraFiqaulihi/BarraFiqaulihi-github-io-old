@@ -72,7 +72,7 @@ class CoreContent {
 	}
 
 	#imgProcessing(img) {
-		let link = img.src.split("/").slice(3).join("/");
+		let link = img.src.split("/").slice(2).join("/");
 		img.src = `${this.#directory}/${link}`;
 
 		let setMaxWidth = () => {
