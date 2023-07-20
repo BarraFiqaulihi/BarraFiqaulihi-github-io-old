@@ -1,6 +1,6 @@
 # Detect Browser Back Button
 
-![Image](img/JavaScript-code.jpg)
+![Image](../img/JavaScript-code.jpg)
 
 (Note: As per Sharky's feedback, I've included code to detect backspaces)
 

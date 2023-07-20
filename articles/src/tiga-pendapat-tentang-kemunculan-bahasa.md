@@ -1,6 +1,6 @@
 # Tiga Pendapat Tentang Kemunculan Bahasa
 
-![Image](img/Languages.jpeg)
+![Image](../img/Languages.jpeg)
 
 ## 1. Penetapan dan Ilham dari Allah SWT. (التوقيف والإلهام)
 
